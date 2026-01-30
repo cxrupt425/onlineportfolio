@@ -1,0 +1,168 @@
+import { Mail, MapPin, Github, Linkedin, Twitter, Coffee, Code, Palette } from 'lucide-react';
+
+function App() {
+  return (
+    <div className="min-h-screen bg-slate-950">
+      <div className="max-w-4xl mx-auto px-6 py-16 md:py-24">
+        <header className="mb-16">
+          <div className="w-32 h-32 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full mb-6 flex items-center justify-center text-slate-950 text-4xl font-light">
+            PT
+          </div>
+          <h1 className="text-5xl md:text-6xl font-light text-white mb-4 tracking-tight">
+            Pierce Tutak
+          </h1>
+          <p className="text-xl text-slate-400 font-light">
+            Avid Mountain Biker & Energy Drink Aficionado
+          </p>
+        </header>
+
+        <section className="mb-16 space-y-4">
+          <h2 className="text-2xl font-light text-white mb-6 border-b border-slate-800 pb-2">
+            About
+          </h2>
+          <p className="text-slate-300 leading-relaxed text-lg font-light">
+            I love spending time mountain biking and being in nature. 
+          </p>
+          <p className="text-slate-300 leading-relaxed text-lg font-light">
+            When I'm not mountain biking, you'll find me researching the latest patterns in stock trading.
+          </p>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-2xl font-light text-white mb-6 border-b border-slate-800 pb-2">
+            What I Do
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="space-y-3">
+              <div className="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center">
+                <Code className="w-6 h-6 text-cyan-400" />
+              </div>
+              <h3 className="text-lg font-normal text-white">Trading</h3>
+              <p className="text-slate-400 font-light leading-relaxed">
+                I enjoy viewing stock news and making moves quickly to maximize profit.
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              <div className="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center">
+                <Palette className="w-6 h-6 text-cyan-400" />
+              </div>
+              <h3 className="text-lg font-normal text-white">Video Games</h3>
+              <p className="text-slate-400 font-light leading-relaxed">
+                Mostly, when I'm playing video games, I am either playing FPS or racing games.
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              <div className="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center">
+                <Coffee className="w-6 h-6 text-cyan-400" />
+              </div>
+              <h3 className="text-lg font-normal text-white">Mountain Biking</h3>
+              <p className="text-slate-400 font-light leading-relaxed">
+                If I am not doing the previous two, you will see me enjoying my local trails and bike parks.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-2xl font-light text-white mb-6 border-b border-slate-800 pb-2">
+            Interests
+          </h2>
+          <div className="flex flex-wrap gap-3">
+            {['Mountain Biking', 'Running', 'Video Games', 'Photography', 'Trading', 'Sleeping', 'Drawing'].map((interest) => (
+              <span
+                key={interest}
+                className="px-4 py-2 bg-slate-800 text-slate-300 rounded-full text-sm font-light hover:bg-slate-700 hover:text-cyan-400 transition-colors"
+              >
+                {interest}
+              </span>
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-light text-white mb-6 border-b border-slate-800 pb-2">
+            Connect
+          </h2>
+          <div className="space-y-4">
+            <a
+              href="mailto:hello@janedoe.com"
+              className="flex items-center gap-3 text-slate-300 hover:text-cyan-400 transition-colors group"
+            >
+              <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-slate-700 transition-colors">
+                <Mail className="w-5 h-5" />
+              </div>
+              <span className="font-light">hello@piercetutak.com</span>
+            </a>
+
+            <a
+              href="#"
+              className="flex items-center gap-3 text-slate-300 hover:text-cyan-400 transition-colors group"
+            >
+              <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-slate-700 transition-colors">
+                <Github className="w-5 h-5" />
+              </div>
+              <span className="font-light">github.com/piercetutak</span>
+            </a>
+
+            <a
+              href="#"
+              className="flex items-center gap-3 text-slate-300 hover:text-cyan-400 transition-colors group"
+            >
+              <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-slate-700 transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </div>
+              <span className="font-light">linkedin.com/in/piercetutak</span>
+            </a>
+
+            <a
+              href="#"
+              className="flex items-center gap-3 text-slate-300 hover:text-cyan-400 transition-colors group"
+            >
+              <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-slate-700 transition-colors">
+                <Twitter className="w-5 h-5" />
+              </div>
+              <span className="font-light">@piercetutak</span>
+            </a>
+
+            <div className="flex items-center gap-3 text-slate-400 pt-4">
+              <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center">
+                <MapPin className="w-5 h-5" />
+              </div>
+              <span className="font-light">Dublin, CA</span>
+            </div>
+          </div>
+        </section>
+
+        <footer className="mt-24 pt-8 border-t border-slate-800">
+          <div className="flex flex-col items-center gap-4">
+            <p className="text-slate-600 font-light text-center">
+              © 2026 Pierce Tutak. All rights reserved.
+            </p>
+            <div className="flex gap-3">
+              <a
+                href="https://drive.google.com/file/d/1T_h3S7x-n2yozvjQNmaeqS4dHqI5BCzJ/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-slate-950 font-light rounded-full hover:opacity-90 transition-opacity text-sm"
+              >
+                Project #1
+              </a>
+              <a
+                href="https://drive.google.com/file/d/13m6rjFfzbAskdbq_nsdufxMhBe8eNEbu/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-slate-950 font-light rounded-full hover:opacity-90 transition-opacity text-sm"
+              >
+                Project #2
+              </a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  );
+}
+
+export default App;
